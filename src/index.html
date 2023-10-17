@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumindo API</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -17,16 +18,16 @@
       </div>
       <div id="message" class="hide">
         <div class="alert alert-light" role="alert">
-          <h4>Messagem:</h4>
-          <p>Texto da menssagem....</p>
-          <button id="clonse-message" type="button" class="btn btn-secondary">
+          <h4>Mensagem:</h4>
+          <p></p>
+          <button id="close-message" type="button" class="btn btn-secondary">
             Fechar
           </button>
         </div>
       </div>
     </div>
-    <div id="order-form-container" class="container px-md-0">
-      <div id="steps" class="mb-mb-3 pb-md-3">
+    <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
+      <div id="steps" class="mb-md-3 pb-md-3">
         <div class="line"></div>
         <div class="step">
           <i class="bi bi-person active"></i>
@@ -38,12 +39,12 @@
         </div>
         <div class="step">
           <i class="bi bi-credit-card"></i>
-          <p d-none d-md-block>Criação de conta</p>
+          <p d-none d-md-block>Pagamento</p>
         </div>
       </div>
       <div id="form-header">
         <h2>Cadastre o seu Endereço</h2>
-        <p>Preenceh os campos para enviar os seu produtos</p>
+        <p>Preencha os campos para enviar seus produtos</p>
       </div>
       <form id="addres-form">
         <div class="row mb-3">
@@ -62,7 +63,7 @@
           </div>
         </div>
         <div class="row mb-3">
-          <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+          <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
             <input 
               type="text" 
               class="form-control shadow-none" 
@@ -75,7 +76,7 @@
             />
             <label for="address">Rua</label>
           </div>
-          <div class="form-floating col-12 col-sm-6">
+          <div class="col-12 col-sm-6 form-floating">
             <input 
               type="text" 
               class="form-control shadow-none" 
@@ -90,7 +91,7 @@
           </div>
         </div>
         <div class="row mb-3">
-          <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+          <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
             <input 
               type="text" 
               class="form-control shadow-none" 
@@ -102,7 +103,7 @@
             />
             <label for="complement">Digite o complemento</label>
           </div>
-          <div class="form-floating col-12 col-sm-6">
+          <div class="col-12 col-sm-6 form-floating">
             <input 
               type="text" 
               class="form-control shadow-none" 
@@ -117,7 +118,7 @@
           </div>
         </div>
         <div class="row mb-3">
-          <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+          <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
             <input 
               type="text" 
               class="form-control shadow-none" 
@@ -130,11 +131,10 @@
             />
             <label for="city">Cidade</label>
           </div>
-          <div class="form-floating col-12 col-sm-6">
+          <div class="col-12 col-sm-6 mb-3">
             <select 
-              name="region" 
+              class="form-select shadow-none"  
               id="region" 
-              class="form-select shadow-none" 
               disabled 
               required 
               data-input
@@ -170,7 +170,7 @@
           </select>
           </div>
         </div>
-        <div class="d-flex just-content-end">
+        <div class="d-flex justify-content-end">
           <button id="save-btn" type="submit" class="btn btn-primary">
             Cadastrar
           </button>
