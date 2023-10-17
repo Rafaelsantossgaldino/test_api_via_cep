@@ -16,6 +16,7 @@
 #fade {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -46,7 +47,6 @@
 /* Steps */
 #order-form-container {
   padding: 1.5em; 
-  max-width: 700px;
 }
 
 #steps {
@@ -76,7 +76,6 @@
 
 .step .active {
   background-color: var(--secondary-color);
-  color: var(--primary-color);
 }
 
 .step p {
@@ -84,7 +83,7 @@
 }
 
 .line {
-  border-color: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   position: absolute;
   top: 22.5px;
   width: 90%;
@@ -98,8 +97,11 @@
   color: var(--text-color);
 }
 
-
 /* Form */
+#order-form-container{
+  max-width: 700px;
+}
+
 #order-form-container input,
 #order-form-container select {
   background-color: var(--bg-color);
@@ -113,7 +115,6 @@
 
 #order-form-container label {
   color: var(--text-color);
-  left: 1em;
 }
 
 #order-form-container input:disabled,
@@ -126,10 +127,21 @@
   border-color: var(--secondary-color);
 }
 
+#order-form-container .form-floating >label {
+  left: 1;
+}
+
 #save-btn {
   background-color: #25cc88;
   border: none;
   height: 3em;
   width: 80em;
   border-radius: 1.5em;
+}
+
+/* Responsive */
+@media(min-width: 500px){
+  #save-btn{
+    width: 8em;
+  }
 }
